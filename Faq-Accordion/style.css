@@ -27,5 +27,9 @@ body {
     z-index: -100;
 }
 
-
+.faqs-container {
+    max-width: 36rem; 
+    background-color: var(--White);
+    border-radius: 0.7rem;   
+}
 
