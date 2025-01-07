@@ -28,8 +28,75 @@ body {
 }
 
 .faqs-container {
-    max-width: 36rem; 
+    max-width: 32rem; 
     background-color: var(--White);
-    border-radius: 0.7rem;   
+    border-radius: 0.7rem;
+    padding: 2rem; 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
 }
 
+.star {
+    height: 2rem;
+    width: 2rem;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+}
+
+.qs p {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.qs-container {
+    position: relative;
+    min-width: 28rem;
+}
+
+.plus {
+    position: absolute;
+    top: -0.12rem;
+    right: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.minus {
+    position: absolute;
+    top: -0.12rem;
+    right: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+small {
+    color: var(--Grayish-purple); 
+    font-weight: 500;
+    display: none;
+}
+
+.show small {
+    display: block;
+}
+
+.show .minus {
+    display: block; 
+}
+
+.show .plus {
+    display: none;
+}
+
+.qs-container+.qs-container {
+    margin-top: 3rem;
+}
