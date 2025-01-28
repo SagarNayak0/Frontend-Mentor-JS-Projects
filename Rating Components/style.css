@@ -1,0 +1,78 @@
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Overpass", serif;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.card-content {
+    max-width: 23rem;
+}
+
+h1 {
+    color: var(--White);
+    margin-top: 2rem;
+}
+
+p {
+    color: var(--Light-Grey);
+    line-height: 1.5;
+    font-weight: 600;
+}
+.star {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: hsl(214, 13%, 22%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Light-Grey);
+    font-size: 1.2rem;  
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+button {
+    margin-top: 3rem;
+    padding: 16px 155px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    border-radius: 1.5rem;
+    background-color: var(--Light-Grey);
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--Orange);
+    transition: all 0.2s ease-in-out;
+}
