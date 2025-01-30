@@ -65,7 +65,7 @@ button {
     outline: none;
     font-family: inherit;
     border-radius: 1.5rem;
-    background-color: var(--Light-Grey);
+    background-color: var(--White);
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
@@ -75,4 +75,29 @@ button {
 button:hover {
     background-color: var(--Orange);
     transition: all 0.2s ease-in-out;
+}
+
+.circle {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: hsl(214, 13%, 22%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Light-Grey);
+    font-size: 1.2rem; 
+    cursor: pointer; 
+    transition: all 0.2s ease-in-out;
+}
+
+.circle:hover {
+    background-color: var(--Orange);
+    transition: all 0.2s ease-in-out;
+    color: var(--Dark-Blue);
+}
+
+.circle.active {
+    background-color: var(--White);
+    color: var(--Dark-Blue);
 }
