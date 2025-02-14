@@ -1,0 +1,28 @@
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --Linear-135deg-from: hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Linear-135deg-from: hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card-1 {
+    background-image: url(/Frontend-Mentor-JS-Projects/Base-Apparel/images/bg-pattern-desktop.svg);
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
