@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 3rem;
     margin: 0;
     overflow: hidden;
     background-color: var(--Red);
@@ -29,20 +29,21 @@ body {
 
 .text-contents h1 {
    font-size: 3.3rem;
+   line-height: 1.2;
 }
 
 .text-contents {
-    padding: 8rem;
+    max-width: 520px;
 }
 
 #subscribe {
     background-color: var(--Blue);
     padding: 0.8rem 3rem;
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     font-family: inherit;
     width: 100%;
     border: none;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-bottom: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
@@ -53,6 +54,85 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-form {
+#claim:hover {
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+}
+
+#form {
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: inherit;
+    padding: 2.5rem;
+    border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 520px;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border-color: var(--Grayish-Blue);
+    color: #000;
+    outline: none;
+}
+
+.input-field {
+    width: 100%;
+    position: relative;
+}
+
+.input-field + .input-field {
+    margin-top: 2.5rem;
+}
+
+input::placeholder {
+    font-weight: 600;
+}
+
+#claim {
+    background-color: var(--Green);
+    padding: 0.8rem 3rem;
+    border-radius: 0.3rem;
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+
+form p {
+    color: var(--Grayish-Blue);
+    font-size: 0.7rem;
+}
+
+form p span {
+    color: var(--Red);
+    font-weight: 600;
+}
+
+.warning {
+    color: var(--Red);
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.warning:focus {
+    display: none;
+}
+
+.errorimg {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 28%;
+    display: none;
 }

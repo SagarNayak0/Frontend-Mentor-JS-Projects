@@ -18,18 +18,41 @@
             See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
             but understanding how developers think is invaluable. 
         </p>
-    </div>
+    </div>  
 
     <section class="form">
-        <button id="subscribe"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
-        <form action="/">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="email" placeholder="Email Address">
-            <input type="password" placeholder="Password">
-            <button>Claim Your Free Trial</button>
+        <button id="subscribe"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
+        <form id="form">
+            <div class="input-field"> 
+                <input type="text" placeholder="First Name" id="firstName" autocomplete="off">
+                <p class="warning">First Name cannot be empty</p>
+                <img src="/Frontend-Mentor-JS-Projects/Intro-Component-Form/images/icon-error.svg" alt="error" class="errorimg">
+            </div>
+
+            <div class="input-field"> 
+                <input type="text" placeholder="Last Name" id="lastName" autocomplete="off">
+                <p class="warning">Last Name cannot be empty</p>
+                <img src="/Frontend-Mentor-JS-Projects/Intro-Component-Form/images/icon-error.svg" alt="error" class="errorimg">
+            </div>
+
+            <div class="input-field"> 
+                <input type="email" placeholder="Email Address" id="email" autocomplete="off">
+                <p class="warning">Looks like this is not an email</p>
+                <img src="/Frontend-Mentor-JS-Projects/Intro-Component-Form/images/icon-error.svg" alt="error" class="errorimg">
+            </div>
+
+            <div class="input-field"> 
+                <input type="password" placeholder="Password" id="password" autocomplete="off">
+                <p class="warning">Password cannot be empty</p>
+                <img src="/Frontend-Mentor-JS-Projects/Intro-Component-Form/images/icon-error.svg" alt="error" class="errorimg">
+            </div>
+
+            <button id="claim" type="submit">Claim Your Free Trial</button>
+
             <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
         </form>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
