@@ -1,0 +1,78 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 500px;
+    width: 300px;
+    background-color: rgba(11, 118, 175);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.duration {
+    width: 100%;
+}
+
+.range-div {
+    width: 100%;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.music-duration-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.options {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.play_pause {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.prenext {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
