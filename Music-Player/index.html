@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music-Player</title><link rel="shortcut icon" href="/Frontend-Mentor-JS-Projects/Music-Player/images/mp3.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
-</head>
-<body>
     <audio src="songs/song1.mp3" id="audio"></audio>
 
     <main class="main">
         <img src="images/img1.jpg" alt="" id="img" class="img">
 
         <div class="range-div">
-            <input type="range" class="duration">
+            <input type="range" class="duration" id="time_stamp_range" min="0" onchange="change_time_stamp()">
         </div>
 
         <div class="music-duration-div">
-            <div>00:00</div>
-            <div>04:00</div>
+            <div id="current_timestamp">00:00</div>
+            <div id="song_length">04:00</div>
         </div>
 
         <div class="options">

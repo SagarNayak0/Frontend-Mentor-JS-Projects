@@ -1,6 +1,9 @@
 let audio = document.getElementById("audio");
 let play_pause_div = document.getElementById("play_pause");
-let image = document.getElementById("img");
+let img = document.getElementById("img");
+let current_timestamp = document.getElementById("current_timestamp");
+let song_length = document.getElementById("song_length"); 
+let time_stamp_range = document.getElementById("time_stamp_range"); 
 let is_playing = false;
 
 let all_songs = [
@@ -52,9 +55,9 @@ function next_song() {
         current_song = current_song + 1;
     }
 
-    image.src = "images/" + all_images[current_image];
     audio.src = "songs/" + all_songs[current_song];
-
+    img.src = "images/" + all_images[current_song];
+    setSongLength(audio);
     audio.play();
 };
 
@@ -65,7 +68,25 @@ function prev_song() {
         current_song = current_song - 1;
     };
 
-    image.src = "images/" + all_images[current_image]
     audio.src = "songs/" + all_songs[current_song];
+    image.src = "images/" + all_images[current_song];
     audio.play();
 };
+
+function setSongLength(audio) {
+    audio.onloadeddata = () => { 
+        song_length.innerText = audio.duration.toFixed(2);
+        time_stamp_range.max = parseInt(audio.duration);
+    };
+};
+
+audio.ontimeupdate = () => {
+    current_timestamp.innerText = parseInt(audio.currentTime);
+    time_stamp_range.value = parseInt(audio.currentTime);
+};
+
+setSongLength(audio);
+
+function change_time_stamp() {
+    audio.currentTime = time_stamp_range.value;
+}
